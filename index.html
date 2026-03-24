@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>科技新闻汇总</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            min-height: 100vh;
+            color: #fff;
+            padding: 20px;
+        }
+        
+        .header {
+            text-align: center;
+            padding: 40px 20px;
+            margin-bottom: 30px;
+        }
+        
+        .header h1 {
+            font-size: 2.5rem;
+            background: linear-gradient(90deg, #00d4ff, #7c3aed);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            color: #8892b0;
+            font-size: 1rem;
+        }
+        
+        .last-updated {
+            color: #64ffda;
+            font-size: 0.85rem;
+            margin-top: 10px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
+        
+        .card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            padding: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-align: center;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 212, 255, 0.15);
+            border-color: rgba(0, 212, 255, 0.3);
+        }
+        
+        .card-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+        
+        .card-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        
+        .card-subtitle {
+            font-size: 0.85rem;
+            color: #8892b0;
+            margin-bottom: 15px;
+        }
+        
+        .visit-btn {
+            display: inline-block;
+            background: linear-gradient(90deg, #00d4ff, #7c3aed);
+            color: white;
+            text-decoration: none;
+            padding: 10px 25px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .visit-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 20px rgba(0, 212, 255, 0.4);
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 1.5rem;
+            color: #ccd6f6;
+            margin: 40px 0 20px;
+            padding: 0 20px;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            color: #8892b0;
+            margin-bottom: 30px;
+            padding: 0 20px;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: #8892b0;
+            font-size: 0.85rem;
+        }
+        
+        .tech-label {
+            background: rgba(0, 212, 255, 0.1);
+            color: #00d4ff;
+            padding: 3px 10px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            margin-left: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🚀 科技新闻汇总</h1>
+        <p>精选各大科技媒体，一键访问最新资讯</p>
+        <p class="last-updated">最后更新：<span id="updateTime"></span></p>
+    </div>
+    
+    <h2 class="section-title">🌐 国际媒体</h2>
+    <p class="section-subtitle">点击卡片直接访问各大科技媒体官网</p>
+    
+    <div class="container">
+        <div class="card">
+            <div class="card-icon">📰</div>
+            <div class="card-title">TechCrunch<span class="tech-label">美国</span></div>
+            <div class="card-subtitle">创业和科技新闻首选</div>
+            <a href="https://techcrunch.com" target="_blank" class="visit-btn">访问 →</a>
+        </div>
+        
+        <div class="card">
+            <div class="card-icon">🔮</div>
+            <div class="card-title">The Verge<span class="tech-label">美国</span></div>
+            <div class="card-subtitle">科技、文化、艺术交汇</div>
+            <a href="https://www.theverge.com" target="_blank" class="visit-btn">访问 →</a>
+        </div>
+        
+        <div class="card">
+            <div class="card-icon">🔬</div>
+            <div class="card-title">Ars Technica<span class="tech-label">美国</span></div>
+            <div class="card-subtitle">科技内幕和深度分析</div>
+            <a href="https://arstechnica.com" target="_blank" class="visit-btn">访问 →</a>
+        </div>
+        
+        <div class="card">
+            <div class="card-icon">🔌</div>
+            <div class="card-title">Wired<span class="tech-label">美国</span></div>
+            <div class="card-subtitle">科技与商业文化</div>
+            <a href="https://www.wired.com" target="_blank" class="visit-btn">访问 →</a>
+        </div>
+        
+        <div class="card">
+            <div class="card-icon">📱</div>
+            <div class="card-title">Engadget<span class="tech-label">美国</span></div>
+            <div class="card-subtitle">消费电子和产品评测</div>
+            <a href="https://www.engadget.com" target="_blank" class="visit-btn">访问 →</a>
+        </div>
+        
+        <div class="card">
+            <div class="card-icon">💻</div>
+            <div class="card-title">Hacker News<span class="tech-label">美国</span></div>
+            <div class="card-subtitle">程序员社区热点</div>
+            <a href="https://news.ycombinator.com" target="_blank" class="visit-btn">访问 →</a>
+        </div>
+        
+        <div class="card">
+            <div class="card-icon">🚀</div>
+            <div class="card-title">Product Hunt<span class="tech-label">美国</span></div>
+            <div class="card-subtitle">新产品和创意发现</div>
+            <a href="https://www.producthunt.com" target="_blank" class="visit-btn">访问 →</a>
+        </div>
+        
+        <div class="card">
+            <div class="card-icon">🤖</div>
+            <div class="card-title">MIT Tech Review<span class="tech-label">美国</span></div>
+            <div class="card-subtitle">麻省理工科技评论</div>
+            <a href="https://www.technologyreview.com" target="_blank" class="visit-btn">访问 →</a>
+        </div>
+    </div>
+    
+    <h2 class="section-title">🇨🇳 国内媒体</h2>
+    <p class="section-subtitle">中文科技资讯平台</p>
+    
+    <div class="container">
+        <div class="card">
+            <div class="card-icon">📊</div>
+            <div class="card-title">36氪</div>
+            <div class="card-subtitle">中国科技创业首选</div>
+            <a href="https://36kr.com" target="_blank" class="visit-btn">访问 →</a>
+        </div>
+        
+        <div class="card">
+            <div class="card-icon">💬</div>
+            <div class="card-title">知乎</div>
+            <div class="card-subtitle">中文科技问答社区</div>
+            <a href="https://www.zhihu.com/topic/19550517/hot" target="_blank" class="visit-btn">访问 →</a>
+        </div>
+        
+        <div class="card">
+            <div class="card-icon">🔍</div>
+            <div class="card-title">虎嗅</div>
+            <div class="card-subtitle">商业科技资讯</div>
+            <a href="https://www.huxiu.com" target="_blank" class="visit-btn">访问 →</a>
+        </div>
+        
+        <div class="card">
+            <div class="card-icon">📰</div>
+            <div class="card-title">品玩</div>
+            <div class="card-subtitle">科技行业报道</div>
+            <a href="https://www.pingwest.com" target="_blank" class="visit-btn">访问 →</a>
+        </div>
+        
+        <div class="card">
+            <div class="card-icon">⚡</div>
+            <div class="card-title">爱范儿</div>
+            <div class="card-subtitle">数字生活科技媒体</div>
+            <a href="https://www.ifanr.com" target="_blank" class="visit-btn">访问 →</a>
+        </div>
+        
+        <div class="card">
+            <div class="card-icon">🖥️</div>
+            <div class="card-title">少数派</div>
+            <div class="card-subtitle">效率工具和数字生活</div>
+            <a href="https://sspai.com" target="_blank" class="visit-btn">访问 →</a>
+        </div>
+    </div>
+    
+    <h2 class="section-title">📺 科技视频</h2>
+    
+    <div class="container">
+        <div class="card">
+            <div class="card-icon">🎬</div>
+            <div class="card-title">YouTube Tech</div>
+            <div class="card-subtitle">MKBHD、Linus 等科技博主</div>
+            <a href="https://www.youtube.com/feed/subscriptions" target="_blank" class="visit-btn">访问 →</a>
+        </div>
+        
+        <div class="card">
+            <div class="card-icon">📺</div>
+            <div class="card-title">Bilibili 科技</div>
+            <div class="card-subtitle">国内科技视频UP主</div>
+            <a href="https://www.bilibili.com/v/popular/rank/all" target="_blank" class="visit-btn">访问 →</a>
+        </div>
+    </div>
+    
+    <footer>
+        <p>点击上方卡片即可跳转到对应网站</p>
+        <p style="margin-top: 10px;">建议使用 Ctrl+D 收藏本页，每天快速访问</p>
+    </footer>
+
+    <script>
+        document.getElementById('updateTime').textContent = new Date().toLocaleString('zh-CN');
+    </script>
+</body>
+</html>
